@@ -33,7 +33,9 @@ Configuration Directory Server.
 %setup -q
 
 %build
-#make
+%{__make} \
+	MAKE=make \
+
 
 %install
 rm -rf $RPM_BUILD_ROOT
