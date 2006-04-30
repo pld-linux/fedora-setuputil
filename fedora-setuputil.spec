@@ -9,16 +9,11 @@ Group:		Aplications/Libraries
 Source0:	http://directory.fedora.redhat.com/sources/%{name}-%{version}.tar.gz
 # Source0-md5:	6bc26ba2edee75c3c8d5bf9a21bda7b8
 URL:		http://directory.fedora.redhat.com/wiki/SetupUtil
-#BuildRequires:	-
-#BuildRequires:	autoconf
-#BuildRequires:	automake
-#BuildRequires:	intltool
-#BuildRequires:	libtool
-#Requires(postun):	-
-#Requires(pre,post):	-
-#Requires(preun):	-
-Requires:	perl
-#Provides:	-
+BuildRequires:	nss-devel
+BuildRequires:	perl-Mozilla-LDAP
+BuildRequires:	mozldap-devel
+BuildRequires:	nspr-devel >= 4.4.1
+BuildRequires:	rpmbuild(macros) >= 1.228
 Requires:	perl
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -35,6 +30,14 @@ Configuration Directory Server.
 %build
 %{__make} \
 	MAKE=make \
+	BUILD_RPM=0 \
+	BUILD_DEBUG=full \
+	
+
+#BUILD_DEBUG=optimize  - Build optimized version
+#BUILD_DEBUG=full      - Build debug version (default: without BUILD_DEBUG macro, debug version is built)
+#USE_64=1              - Build 64-bit version (currently, for Solaris and HP only)
+#BUILD_RPM=1           - Build RPM package (currently, for RHEL only)
 
 
 %install
