@@ -12,8 +12,8 @@ Group:		Aplications/Libraries
 Source0:	http://directory.fedora.redhat.com/sources/%{name}-%{version}.tar.gz
 # Source0-md5:	6bc26ba2edee75c3c8d5bf9a21bda7b8
 URL:		http://directory.fedora.redhat.com/wiki/SetupUtil
-BuildRequires:	libtermcap-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	libtermcap-devel
 BuildRequires:	mozldap-static
 BuildRequires:	ncurses-devel
 #BuildRequires:	svrcore-devel
@@ -44,7 +44,7 @@ Configuration Directory Servera.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_includedir},%{_libdir}}
-install built/package/*/include/* $RPM_BUILD_ROOT/%{_includedir}
+install built/package/*/include/* $RPM_BUILD_ROOT%{_includedir}
 install built/package/*/lib/* $RPM_BUILD_ROOT%{_libdir}
 
 %clean
