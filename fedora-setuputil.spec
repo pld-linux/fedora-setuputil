@@ -4,7 +4,7 @@ Name:		fedora-setuputil
 Version:	1.0.3
 Release:	0.1
 License:	LGPL
-Group:		Aplications/Libraries
+Group:		Development/Libraries
 Source0:	http://directory.fedora.redhat.com/sources/%{name}-%{version}.tar.gz
 # Source0-md5:	f2ce6537b6b02f34b8a7409bedfe8168
 URL:		http://directory.fedora.redhat.com/wiki/SetupUtil
