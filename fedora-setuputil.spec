@@ -9,11 +9,11 @@ Source0:	http://directory.fedora.redhat.com/sources/%{name}-%{version}.tar.gz
 # Source0-md5:	f2ce6537b6b02f34b8a7409bedfe8168
 URL:		http://directory.fedora.redhat.com/wiki/SetupUtil
 BuildRequires:	libstdc++-devel
-BuildRequires:	mozldap-devel
+BuildRequires:	mozldap-devel >= 6.0
 BuildRequires:	ncurses-devel
 BuildRequires:	perl-base
 Requires:	libstdc++-devel
-Requires:	mozldap-devel
+Requires:	mozldap-devel >= 6.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_includedir	/usr/include/%{name}
