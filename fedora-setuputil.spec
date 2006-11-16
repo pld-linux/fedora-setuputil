@@ -30,7 +30,7 @@ Configuration Directory Servera.
 %setup -q
 
 %build
-%{__make} \
+%{__make} buildInstaller \
 	ARCH_OPT="%{rpmcflags} -I/usr/include/ncurses" \
 	ARCH_DEBUG="%{rpmcflags} -I/usr/include/ncurses" \
 	BUILD_DEBUG=%{?debug:full}%{!?debug:optimize} \
@@ -47,8 +47,8 @@ Configuration Directory Servera.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_includedir},%{_libdir}}
 
-install built/package/*/include/*.h $RPM_BUILD_ROOT%{_includedir}
-install built/package/*/lib/*.a $RPM_BUILD_ROOT%{_libdir}
+install built/*/include/*.h $RPM_BUILD_ROOT%{_includedir}
+install built/*/lib/*.a $RPM_BUILD_ROOT%{_libdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
