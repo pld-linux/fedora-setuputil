@@ -1,5 +1,5 @@
 Summary:	Fedora Setup SDK - server configuration library
-Summary(pl):	Fedora Setup SDK - biblioteka do konfiguracji serwera
+Summary(pl.UTF-8):   Fedora Setup SDK - biblioteka do konfiguracji serwera
 Name:		fedora-setuputil
 Version:	1.0.3
 Release:	0.1
@@ -22,8 +22,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Fedora Setup SDK is a library to configure your server using the
 Configuration Directory Server.
 
-%description -l pl
-Fedora Setup SDK to biblioteka do konfiguracji serwera przy uøyciu
+%description -l pl.UTF-8
+Fedora Setup SDK to biblioteka do konfiguracji serwera przy u≈ºyciu
 Configuration Directory Servera.
 
 %prep
